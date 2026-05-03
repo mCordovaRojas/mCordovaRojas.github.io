@@ -1,0 +1,16 @@
+name: Run API Script
+
+on: [push]
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+
+    env:
+      APIKEY: ${{ secrets.APIKEY }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run script
+        run: node index.js
