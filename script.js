@@ -2,8 +2,7 @@
 const weatherIcon = document.getElementById("main_icon");
 
 // API configuration
-const APIKEY = "fbe48596719c08b9ab24ab523d31bb95", // OpenWeatherMap API key
-      URL = "https://api.openweathermap.org/data/2.5/weather?US&units=imperial&q="; // Base endpoint (Fahrenheit)
+const URL = "https://api.openweathermap.org/data/2.5/weather?US&units=imperial&q="; // Base endpoint (Fahrenheit)
 
 // UI elements
 const searchBox = document.getElementById("city"); // City input field
