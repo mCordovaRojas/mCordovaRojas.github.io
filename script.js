@@ -11,7 +11,7 @@ const searchBtn = document.getElementById("btn");  // Search button
 // Fetch weather data and update UI
 async function checkWeather(city = 'tunisia') {
     // Request weather data for the given city
-    const res = await fetch(URL + city + `&appid=${APIKEY}`);
+    const res = await fetch(URL + city + `&appid=${{secrets.APIKEY}}`);
     let data = await res.json();
 
     // Handles an invalid entry
