@@ -2,7 +2,8 @@
 const weatherIcon = document.getElementById("main_icon");
 
 // API configuration
-const URL = "https://api.openweathermap.org/data/2.5/weather?US&units=imperial&q="; // Base endpoint (Fahrenheit)
+const APIKEY = "fbe48596719c08b9ab24ab523d31bb95", // OpenWeatherMap API key
+      URL = "https://api.openweathermap.org/data/2.5/weather?US&units=imperial&q="; // Base endpoint (Fahrenheit)
 
 // UI elements
 const searchBox = document.getElementById("city"); // City input field
@@ -11,7 +12,7 @@ const searchBtn = document.getElementById("btn");  // Search button
 // Fetch weather data and update UI
 async function checkWeather(city = 'tunisia') {
     // Request weather data for the given city
-    const res = await fetch(`${URL}${city}&appid=${process.env.APIKEY}`);
+    const res = await fetch(URL + city + `&appid=${APIKEY}`);
     let data = await res.json();
 
     // Handles an invalid entry
